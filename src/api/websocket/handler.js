@@ -56,6 +56,7 @@ export function handleMessageResponse(type, userID, response) {
         // When a chat has been created
         case 'created-chat':
             // Add chat to chats array in warm
+            console.log(response)
             chatsStore.addMessage(response);
             // Emit an update for chats globally
             chatsStore.eventEmitter.emit('updateChats');

@@ -1,17 +1,18 @@
 import { API } from '@env'
 
+const url = `https://${API}/api`
+
 export const api = {
-    url: `https://${API}/api`,
     
     // Users
-    registerUser: `https://sschat-api-production.up.railway.app/api/users/registeruser`,
-    checkUsers: `https://sschat-api-production.up.railway.app/api/users/checkuser`,
-    checkToken: `https://sschat-api-production.up.railway.app/api/users/checktoken`,
+    registerUser: `${url}/users/registeruser`,
+    checkUsers: `${url}/users/checkuser`,
+    checkToken: `${url}/users/checktoken`,
 
     // Chats
-    newChat: `https://sschat-api-production.up.railway.app/api/chats/newchat`,
-    getChats: `https://sschat-api-production.up.railway.app/api/chats/getchats`,
+    newChat: `${url}/chats/newchat`,
+    getChats: `${url}/chats/getchats`,
 
     // WebSocket
-    websocket: `wss://sschat-api-production.up.railway.app`
+    websocket: `wss://${API}`
 }

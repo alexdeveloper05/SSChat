@@ -130,8 +130,9 @@ export default function Chat({ route }) {
     useEffect(() => {
         const handleMessagesUpdate = () => {
             // Update state with nem messages
-            setMessages(messagesStore.getMessages(otherUserToken));
-            setIsLoading(false)
+            const updatedMessages = messagesStore.getMessages(otherUserToken);
+            setMessages(updatedMessages);
+            setIsLoading(false);
         };
     
         // Listen hot changes
@@ -141,7 +142,7 @@ export default function Chat({ route }) {
         return () => {
             listener.remove();
         };
-    }, []);
+    }, [otherUserToken]);
 
     /** Scroll to bottom of the chat */
     useEffect(() => {
