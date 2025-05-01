@@ -50,7 +50,7 @@ export default function Main({navigation}) {
         setIsOptionMenuVisible(false)
     }
 
-    // ----- DOM ----- ---------------------------------------------------------------------------
+    // ----- DOM ---------------------------------------------------------------------------------
     return (
         <View style={style.screen}>
 
